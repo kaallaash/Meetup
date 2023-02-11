@@ -1,12 +1,10 @@
 ﻿using Meetup.DAL.Context;
+using Meetup.DAL.Entities;
+using Meetup.DAL.Interfaces.Repositories;
+using Meetup.DAL.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Meetup.DAL.DI;
 
@@ -16,8 +14,8 @@ public static class DataAccessRegister
         this IServiceCollection services,
         IConfiguration configuration)
     {
-        //services.AddScoped<IMeetupRepository<MeetupEntity>, MeetupRepository>();
-        //services.AddScoped<ISpeakerRepository<SpeakerEntity>, SpeakerRepository>();
+        services.AddScoped<IEventRepository<EventEntity>, EventRepository>();
+        services.AddScoped<ISpeakerRepository<SpeakerEntity>, SpeakerRepository>();
 
         services.AddDbContext<DatabaseContext>(op =>
         {
