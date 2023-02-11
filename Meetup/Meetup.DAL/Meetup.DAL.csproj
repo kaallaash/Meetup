@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Meetup.Core\Meetup.Core.csproj" />
+  </ItemGroup>
+
 </Project>
