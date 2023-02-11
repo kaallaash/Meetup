@@ -6,8 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Meetup.DAL\Meetup.DAL.csproj" />
-  </ItemGroup>
-
 </Project>
