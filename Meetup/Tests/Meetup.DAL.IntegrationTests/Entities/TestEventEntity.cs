@@ -3,7 +3,7 @@ using Meetup.DAL.IntegrationTests.Helpers;
 
 namespace Meetup.DAL.IntegrationTests.Entities;
 
-internal static class TestEventEntity
+public static class TestEventEntity
 {
     internal static IEnumerable<EventEntity> GetValidEventEntitiesWithId() => new List<EventEntity>()
     {
