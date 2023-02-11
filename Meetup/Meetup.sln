@@ -7,7 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Meetup.DAL", "Meetup.DAL\Me
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Meetup.BLL", "Meetup.BLL\Meetup.BLL.csproj", "{56F5DAC3-AB34-481D-AE3A-55BE76B1E36A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meetup.API", "Meetup.API\Meetup.API.csproj", "{9BC543A6-387C-4271-9E2B-BAC8D9154D5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Meetup.API", "Meetup.API\Meetup.API.csproj", "{9BC543A6-387C-4271-9E2B-BAC8D9154D5E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{893A8229-AB8C-4093-B708-179F4228DC85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meetup.Core", "Core\Meetup.Core\Meetup.Core.csproj", "{E2A9D175-C882-44C7-A9E8-0F4861AAEC81}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,9 +31,16 @@ Global
 		{9BC543A6-387C-4271-9E2B-BAC8D9154D5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BC543A6-387C-4271-9E2B-BAC8D9154D5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BC543A6-387C-4271-9E2B-BAC8D9154D5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2A9D175-C882-44C7-A9E8-0F4861AAEC81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2A9D175-C882-44C7-A9E8-0F4861AAEC81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2A9D175-C882-44C7-A9E8-0F4861AAEC81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2A9D175-C882-44C7-A9E8-0F4861AAEC81}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E2A9D175-C882-44C7-A9E8-0F4861AAEC81} = {893A8229-AB8C-4093-B708-179F4228DC85}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5713D0BA-BA04-429B-BB11-CC2AAED10B30}
