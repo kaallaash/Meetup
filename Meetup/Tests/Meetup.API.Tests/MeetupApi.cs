@@ -10,7 +10,7 @@ using Meetup.Core.Tests.FakePolicy;
 
 namespace Meetup.API.Tests;
 
-internal class DrawingApi : WebApplicationFactory<Program>
+internal class MeetupApi : WebApplicationFactory<Program>
 {
     protected override IHost CreateHost(IHostBuilder builder)
     {
