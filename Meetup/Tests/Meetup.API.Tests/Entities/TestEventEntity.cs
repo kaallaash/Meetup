@@ -22,12 +22,4 @@ public static class TestEventEntity
         EventEntityHelper.CreateValidEventEntityWithoutId(),
         EventEntityHelper.CreateValidEventEntityWithoutId()
     };
-
-    public static IEnumerable<object[]> GetValidEventEntities()
-    {
-        foreach (var validCreatedEventEntity in GetValidCreatedEventEntities())
-        {
-            yield return new object[] { validCreatedEventEntity };
-        }
-    }
 }

@@ -22,12 +22,4 @@ internal static class TestSpeakerEntity
         SpeakerEntityHelper.CreateValidSpeakerEntityWithoutId(),
         SpeakerEntityHelper.CreateValidSpeakerEntityWithoutId()
     };
-
-    public static IEnumerable<object[]> GetValidSpeakerEntities()
-    {
-        foreach (var validCreatedSpeakerEntity in GetValidCreatedSpeakerEntities())
-        {
-            yield return new object[] { validCreatedSpeakerEntity };
-        }
-    }
 }
