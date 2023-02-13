@@ -31,6 +31,7 @@ public class SpeakerRepository : ISpeakerRepository<SpeakerEntity>
     {
         return await _db.Speakers
             .AsNoTracking()
+            .Include(s => s.Events)
             .FirstOrDefaultAsync(s => s.Id == id, cancellationToken);
     }
 
@@ -38,6 +39,7 @@ public class SpeakerRepository : ISpeakerRepository<SpeakerEntity>
     {
         return await _db.Speakers
             .AsNoTracking()
+            .Include(s => s.Events)
             .FirstOrDefaultAsync(s => s.Email == email, cancellationToken);
     }
 
@@ -45,6 +47,7 @@ public class SpeakerRepository : ISpeakerRepository<SpeakerEntity>
     {
         return await _db.Speakers
             .AsNoTracking()
+            .Include(s => s.Events)
             .ToListAsync(cancellationToken);
     }
 
