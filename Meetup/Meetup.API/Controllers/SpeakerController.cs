@@ -3,6 +3,7 @@ using FluentValidation;
 using Meetup.API.ViewModels;
 using Meetup.BLL.Interfaces;
 using Meetup.BLL.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Meetup.API.Controllers;
@@ -25,6 +26,7 @@ public class SpeakerController : Controller
         _changeSpeakerViewModelValidator = changeSpeakerViewModelValidator;
     }
 
+    [Authorize]
     [HttpGet("{id}")]
     public async Task<SpeakerViewModel> Get(
         int id,
@@ -36,6 +38,7 @@ public class SpeakerController : Controller
         return _mapper.Map<SpeakerViewModel>(speaker);
     }
 
+    [Authorize]
     [HttpGet]
     public async Task<IEnumerable<SpeakerViewModel>> GetAll(
         CancellationToken cancellationToken)
@@ -62,6 +65,7 @@ public class SpeakerController : Controller
         return _mapper.Map<SpeakerViewModel>(speaker);
     }
 
+    [Authorize]
     [HttpPut("{id}")]
     public async Task<SpeakerViewModel> Update(
         int id,
@@ -80,6 +84,7 @@ public class SpeakerController : Controller
         return _mapper.Map<SpeakerViewModel>(result);
     }
 
+    [Authorize]
     [HttpDelete("{id}")]
     public Task Delete(
         int id,

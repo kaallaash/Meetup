@@ -1,3 +1,4 @@
+using AuthorizationService.API.DI;
 using FluentValidation;
 using Meetup.API.Validators;
 using Meetup.API.ViewModels;
@@ -14,6 +15,7 @@ builder.Services
     .AddAutoMapper(typeof(Meetup.API.AutoMapper.MappingProfile), typeof(Meetup.BLL.AutoMapper.MappingProfile));
 builder.Services.AddScoped<IValidator<ChangeEventViewModel>, ChangeEventViewModelValidator>();
 builder.Services.AddScoped<IValidator<ChangeSpeakerViewModel>, ChangeSpeakerViewModelValidator>();
+builder.Services.AddAuthentication(builder.Configuration);
 
 var app = builder.Build();
 
@@ -25,6 +27,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
