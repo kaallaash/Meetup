@@ -1,6 +1,4 @@
-﻿using Meetup.DAL.Entities;
-
-namespace Meetup.BLL.Models;
+﻿namespace Meetup.BLL.Models;
 
 public class EventModel
 {
@@ -10,5 +8,5 @@ public class EventModel
     public string? Location { get; set; }
     public DateTimeOffset Date { get; set; }
     public int SpeakerId { get; set; }
-    public SpeakerEntity? Speaker { get; set; }
+    public SpeakerModel? Speaker { get; set; }
 }

@@ -1,6 +1,4 @@
-﻿using Meetup.DAL.Entities;
-
-namespace Meetup.BLL.Models;
+﻿namespace Meetup.BLL.Models;
 
 public class SpeakerModel
 {
@@ -10,5 +8,5 @@ public class SpeakerModel
     public string? Password { get; set; }
     public string? RefreshToken { get; set; }
     public DateTimeOffset RefreshTokenExpiryTime { get; set; }
-    public IEnumerable<EventEntity>? Events { get; set; }
+    public IEnumerable<EventModel>? Events { get; set; }
 }

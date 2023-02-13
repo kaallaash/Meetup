@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Meetup.Core", "Core\Meetup.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{D1216786-5381-42EC-8332-9D474E14615C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meetup.DAL.IntegrationTests", "Tests\Meetup.DAL.IntegrationTests\Meetup.DAL.IntegrationTests.csproj", "{61A5B7BE-101D-4673-82A5-B2161A7C72A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Meetup.DAL.IntegrationTests", "Tests\Meetup.DAL.IntegrationTests\Meetup.DAL.IntegrationTests.csproj", "{61A5B7BE-101D-4673-82A5-B2161A7C72A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meetup.BLL.Tests", "Tests\Meetup.BLL.Tests\Meetup.BLL.Tests.csproj", "{F393759B-6E01-4E52-BD09-381DED3A73BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{61A5B7BE-101D-4673-82A5-B2161A7C72A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61A5B7BE-101D-4673-82A5-B2161A7C72A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61A5B7BE-101D-4673-82A5-B2161A7C72A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F393759B-6E01-4E52-BD09-381DED3A73BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F393759B-6E01-4E52-BD09-381DED3A73BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F393759B-6E01-4E52-BD09-381DED3A73BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F393759B-6E01-4E52-BD09-381DED3A73BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +56,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{E2A9D175-C882-44C7-A9E8-0F4861AAEC81} = {893A8229-AB8C-4093-B708-179F4228DC85}
 		{61A5B7BE-101D-4673-82A5-B2161A7C72A8} = {D1216786-5381-42EC-8332-9D474E14615C}
+		{F393759B-6E01-4E52-BD09-381DED3A73BA} = {D1216786-5381-42EC-8332-9D474E14615C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5713D0BA-BA04-429B-BB11-CC2AAED10B30}
