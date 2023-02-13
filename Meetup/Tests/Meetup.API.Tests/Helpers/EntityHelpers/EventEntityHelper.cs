@@ -1,6 +1,6 @@
 ﻿using Meetup.DAL.Entities;
 
-namespace Meetup.DAL.IntegrationTests.Helpers;
+namespace Meetup.API.Tests.Helpers.EntityHelpers;
 
 public static class EventEntityHelper
 {
@@ -34,11 +34,11 @@ public static class EventEntityHelper
     public static EventEntity CreateValidEventEntityWithoutSpeaker(int id) =>
         new EventEntity()
         {
-        Id = id,
-        Title = $"Title{id}",
-        Description = $"Description{id}",
-        Location = $"Location{id}",
-        Date = DateTime.Now,
-        SpeakerId = id,
+            Id = id,
+            Title = $"Title{id}",
+            Description = $"Description{id}",
+            Location = $"Location{id}",
+            Date = DateTime.Now,
+            SpeakerId = id,
         };
 }

@@ -8,7 +8,14 @@ public class MappingProfile : Profile
 {
     public MappingProfile()
     {
-        CreateMap<EventEntity, EventModel>().ReverseMap();
-        CreateMap<SpeakerEntity, SpeakerModel>().ReverseMap();
+        CreateMap<EventModel, EventEntity>();
+        CreateMap<EventEntity, EventModel>()
+            .ForMember(m => m.Speaker, opt =>
+                opt.MapFrom(e => new SpeakerModel()
+                {
+                    Id = e.Speaker.Id,
+                    Name = e.Speaker.Name
+                }));
+        CreateMap<SpeakerModel, SpeakerEntity>().ReverseMap();
     }
 }

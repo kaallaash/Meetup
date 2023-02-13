@@ -1,20 +1,22 @@
+using FluentValidation;
+using Meetup.API.Validators;
+using Meetup.API.ViewModels;
 using Meetup.BLL.DI;
-using Meetup.DAL.DI;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddMeetupBll(builder.Configuration);
+builder.Services
+    .AddAutoMapper(typeof(Meetup.API.AutoMapper.MappingProfile), typeof(Meetup.BLL.AutoMapper.MappingProfile));
+builder.Services.AddScoped<IValidator<ChangeEventViewModel>, ChangeEventViewModelValidator>();
+builder.Services.AddScoped<IValidator<ChangeSpeakerViewModel>, ChangeSpeakerViewModelValidator>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

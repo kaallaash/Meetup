@@ -31,6 +31,7 @@ public class EventRepository : IEventRepository<EventEntity>
     {
         return await _db.Events
             .AsNoTracking()
+            .Include(e => e.Speaker)
             .FirstOrDefaultAsync(e => e.Id == id, cancellationToken);
     }
 
@@ -38,6 +39,7 @@ public class EventRepository : IEventRepository<EventEntity>
     {
         return await _db.Events
             .AsNoTracking()
+            .Include(e => e.Speaker)
             .ToListAsync(cancellationToken);
     }
 
