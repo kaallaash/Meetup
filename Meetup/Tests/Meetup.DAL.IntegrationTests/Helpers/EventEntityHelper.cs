@@ -22,12 +22,12 @@ public static class EventEntityHelper
 
         return new EventEntity()
         {
-            Id = number,
             Title = $"Title{number}",
             Description = $"Description{number}",
             Location = $"Location{number}",
             Date = DateTime.Now,
             SpeakerId = number,
+            Speaker = new SpeakerEntity()
         };
     }
 

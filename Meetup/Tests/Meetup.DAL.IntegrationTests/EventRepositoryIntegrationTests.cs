@@ -34,7 +34,7 @@ public class EventRepositoryIntegrationTests : IDisposable
         await AddAsync(_context, eventEntity);
 
         var createdEventEntity = await _context.Events
-            .FirstOrDefaultAsync(e => e.Id == eventEntity.Id);
+            .FirstOrDefaultAsync(e => e.Title == eventEntity.Title && e.Description == eventEntity.Description);
 
         createdEventEntity.ShouldNotBeNull();
 
