@@ -27,11 +27,4 @@
     <ProjectReference Include="..\..\Meetup.API\Meetup.API.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Models\" />
-    <Folder Include="Helpers\" />
-    <Folder Include="Entities\" />
-    <Folder Include="ViewModels\" />
-  </ItemGroup>
-
 </Project>
