@@ -8,7 +8,7 @@
 ### The first Steps
 StartPath: https://localhost:7132/api
 
-1. Create account(speaker):
+1) Create account(speaker):
 If you prefer Swagger => https://localhost:7132/swagger/index.html
 If you prefer Postman =>
 Method: `POST`
@@ -17,7 +17,7 @@ Body: `{
   "name": "string",
   "email": "string",
   "password": "string"}`
-2. Get Token
+2) Get Token
 Method: `POST`
 url:`$"{StartPath}/token"`
 Body: `{  
@@ -27,14 +27,14 @@ Body: `{
 ### docs
 StartPath: https://localhost:7132/api
 
-1. Return tokens
+1) Return tokens
 Method: `POST`
 url:`$"{StartPath}/token"`
 Body: `{  
   "email": "string",
   "password": "string"}`
 
-2. Refresh tokens
+2) Refresh tokens
 Method: `POST`
 url:`$"{StartPath}/token"`
 Body: `{  
