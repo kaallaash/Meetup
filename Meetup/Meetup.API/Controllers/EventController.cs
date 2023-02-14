@@ -3,10 +3,12 @@ using FluentValidation;
 using Meetup.API.ViewModels;
 using Meetup.BLL.Interfaces;
 using Meetup.BLL.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Meetup.API.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class EventController : Controller
