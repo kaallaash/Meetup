@@ -1,7 +1,7 @@
 # Documentation
 
 ###launching
-1. Go to [Meetup/Meetup.API](Meetup.API) directory.
+1. Go to [Meetup.API](Meetup/Meetup.API) directory.
 2. Open command line
 3. Enter `dotnet run`
 
