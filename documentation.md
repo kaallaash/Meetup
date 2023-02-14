@@ -1,11 +1,11 @@
 # Documentation
 
-###launching
+### launching
 1. Go to [Meetup.API](Meetup/Meetup.API) directory.
 2. Open command line
 3. Enter `dotnet run`
 
-###The first Steps
+### The first Steps
 StartPath: https://localhost:7132/api
 
 1. Create account(speaker):
